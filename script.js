@@ -24,19 +24,19 @@ function afficherListeTaches() {
         }
 
         const divGauche = document.createElement('div');
-        divGauche.className = 'task-item-left';
+        divGauche.className = 'task-item-left';         /** **/
 
         const checkbox = document.createElement('input');
-        checkbox.type = 'checkbox';
+        checkbox.type = 'checkbox';         /** **/
         checkbox.className = 'task-checkbox';
         checkbox.checked = tache.terminee;
             /** création d'un événement au changement de statut du boutton lorsqu'il est cliqué(boutton)**/
         checkbox.addEventListener('change', () => changerStatutTache(tache.id));
 
-        const spanTexte = document.createElement('span');
+        const spanTexte = document.createElement('span');         /** **/
         spanTexte.className = 'task-text';
         spanTexte.textContent = tache.texte;
-
+        /** **/
         divGauche.appendChild(checkbox);
         divGauche.appendChild(spanTexte);
 
@@ -46,11 +46,11 @@ function afficherListeTaches() {
                                         (pour supprimer les tâches faites ou alors celle mise par erreur**/
 
         boutonSupprimer.addEventListener('click', () => supprimerTache(tache.id));
-
+        /** ajout de l'événement Listener pour le boutton quand la souris 'click' cela supprime la tâche sélectionner **/
         li.appendChild(divGauche);
         li.appendChild(boutonSupprimer);
 
-        elListeConteneur.appendChild(li);
+        elListeConteneur.appendChild(li);         /** **/
     });
 
     mettreAJourCompteur();
@@ -72,7 +72,7 @@ function ajouterNouvelleTache() {
     };
 
     listeTaches.push(nouvelleTache);
-    elInputTache.value = '';
+    elInputTache.value = '';         /** **/
     afficherListeTaches();
 }
 
