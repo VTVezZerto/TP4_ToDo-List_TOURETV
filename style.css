@@ -143,3 +143,35 @@ h1 {
 .delete-btn:hover {
     background-color: #dc2626;
 }
+
+.filter-section {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.filter-btn {
+    padding: 8px 16px;
+    border: 1px solid #800080 ;
+    background-color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+    background-color: #f0f0f0;
+}
+
+.filter-btn.active {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #800080 ;
+}
+
+/* Style optionnel pour marquer visuellement une tâche terminée */
+.task-item.completed span {
+    text-decoration: line-through;
+    color: #888;
+}
